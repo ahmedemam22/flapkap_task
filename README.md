@@ -27,9 +27,9 @@ flutter pub get
 flutter run
 ```
 * On the first screen, you will see the numeric metrics for your orders, including:
-    * Total count of orders: Displays the total number of orders placed.
-    * Average price: Shows the average price of all the orders.
-    * Number of returns: Displays the total number of returned orders.
+  * Total count of orders: Displays the total number of orders placed.
+  * Average price: Shows the average price of all the orders.
+  * Number of returns: Displays the total number of returned orders.
 
 * On the second screen, you will see a graph plotting the number of orders over time.
 
@@ -40,7 +40,7 @@ flutter run
 * fl_chart: For plotting the graph.
 * flutter_bloc: For managing state across screens.
 * flutter_screenutil : for responsive
-* freezed : for code generator
+* freezed : for code generator 
 
 ## Contributing
 
