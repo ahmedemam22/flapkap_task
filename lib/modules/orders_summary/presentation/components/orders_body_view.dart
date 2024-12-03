@@ -22,7 +22,7 @@ class OrdersBodyView extends StatelessWidget {
           RecentOrdersView(),
           20.verticalSpace,
 
-          OrdersStatisticsView(),
+          Flexible(child: OrdersStatisticsView()),
           Expanded(child: Align(
               alignment: Alignment.bottomCenter,
               child: AppTextButton(buttonText: 'Display Graph', textStyle: TextStyles.font16WhiteMedium, onPressed: ()=>Navigator.pushNamed(context,Routes.orderChartScreen,arguments: context.read<GetOrdersCubit>().state.item))))

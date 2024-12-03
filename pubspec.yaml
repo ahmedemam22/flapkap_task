@@ -74,25 +74,16 @@ dev_dependencies:
   hexcolor: ^3.0.1
   #format date
   intl: ^0.19.0
+  #simplifies mocking
+  mocktail: ^1.0.4
   #launcher icon
-  flutter_launcher_icons: ^0.14.1
-flutter_launcher_icons:
-  android: "launcher_icon"
+  flutter_launcher_icons: ^0.13.0
+  flutter_native_splash: ^2.4.1
+flutter_icons:
+  android: true
   ios: true
-  image_path: "assets/media/icons/logo_ic.jpg"
-  min_sdk_android: 21 # android min sdk min:16, default 21
-  web:
-    generate: true
-    image_path: "assets/media/icons/logo_ic.jpg"
-    background_color: "#hexcode"
-    theme_color: "#hexcode"
-  windows:
-    generate: true
-    image_path: "assets/media/icons/logo_ic.jpg"
-    icon_size: 48 # min:48, max:256, default: 48
-  macos:
-    generate: true
-    image_path: "assets/media/icons/logo_ic.jpg"
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 21
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -107,7 +98,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - assets/media/icons/
+     - assets/icon/icon.png
      - assets/json/data.json
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -20,7 +20,7 @@ late GetOrdersCubit _ordersCubit;
         SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(children: List.generate(3, (index){
-              return RecentOrderItemView(order:_ordersCubit.state.item!=null?_ordersCubit.state.item![index] :OrderModel.getDummyData());
+              return RecentOrderItemView(order:_ordersCubit.state.item!=null&&_ordersCubit.state.item!.length>3?_ordersCubit.state.item![index] :OrderModel.getDummyData());
           
             })
           

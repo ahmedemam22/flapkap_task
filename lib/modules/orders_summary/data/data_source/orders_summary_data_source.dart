@@ -13,21 +13,18 @@ abstract class OrdersSummaryDataSource{
 @LazySingleton(as: OrdersSummaryDataSource)
 class OrdersSummaryDataSourceImpl implements OrdersSummaryDataSource {
   @override
-  Future<Either<String,List<OrderModel>>> fetchOrders()async {
-    List<OrderModel>orders=[];
-   try{ String jsonString = await rootBundle.loadString(Assets.assetsJsonData);
-    List<dynamic> data = json.decode(jsonString);
+  Future<Either<String, List<OrderModel>>> fetchOrders() async {
+    List<OrderModel> orders = [];
+    try {
+      String jsonString = await rootBundle.loadString(Assets.assetsJsonData);
+      List<dynamic> data = json.decode(jsonString);
 
-    orders=data.map((json) => OrderModel.fromJson(json)).toList();
-
+      orders = data.map((json) => OrderModel.fromJson(json)).toList();
+    } catch (e) {
+      return Left('can\'t load data');
+    }
+    return Right(orders);
   }
-  catch(e){
-
-     return Left(e.toString());
-   }
-   return Right(orders);
-
-}
 
   }
 

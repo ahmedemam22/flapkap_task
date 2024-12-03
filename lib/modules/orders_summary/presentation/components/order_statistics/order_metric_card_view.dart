@@ -11,19 +11,21 @@ class OrderMetricCardView extends StatelessWidget {
 
     @override
     Widget build(BuildContext context) {
-    return Card(
-      color: color,
-    margin: EdgeInsets.symmetric(vertical: 8.h),
-    child: Padding(
-    padding:  EdgeInsets.all(16.r),
-    child: Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-    Text(title, style: TextStyles.font18WhiteMedium,),
-    Text(value, style:  TextStyles.font16WhiteMedium,),
-    ],
-    ),
-    ),
+    return Flexible(
+      child: Card(
+        color: color,
+      margin: EdgeInsets.symmetric(vertical: 8.h),
+      child: Padding(
+      padding:  EdgeInsets.all(16.r),
+      child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+      Text(title, style: TextStyles.font18WhiteMedium,),
+      Text(value, style:  TextStyles.font16WhiteMedium,),
+      ],
+      ),
+      ),
+      ),
     );
     }
   }
